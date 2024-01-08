@@ -24,7 +24,10 @@ public class JSWebViewActivity extends AppCompatActivity {
         webView.getSettings().setLoadWithOverviewMode(true);
         webView.getSettings().setUseWideViewPort(true);
         webView.getSettings().setJavaScriptEnabled(true);
+        webView.addJavascriptInterface(new MainJsInterface(getApplicationContext()), "app");
 
         webView.loadUrl("https://luvgaram.github.io/webviewsample/jsinterface.html");
     }
 }
+
+
